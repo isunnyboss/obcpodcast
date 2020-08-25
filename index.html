@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Hamburger Menu using AlpineJS and TailwindCSS</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css'>
+    <link rel='stylesheet' href='dist/style.css'>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+<style type="text/css">
+
+    body {
+        background-color: #212121;
+    }
+
+    a {
+        color: white;
+    }
+    
+    .i-card {
+         background-color: #ababa8;
+          width: 7em;
+          height: 10em;
+    }
+
+    .i-card-img {
+        width: 100%;
+        height: 7em;
+        background-color: yellow;
+    }
+
+
+    .i-card-name {
+         background-color: #191919;
+          display: flex;
+          align-self: flex-end;
+          width: 7em;
+          height: 3em;
+       justify-content: center;
+       padding: 0.6em;
+       color: white;
+    }
+
+    .bolly {
+       height: 7em;
+       width: 7em;
+
+    }
+
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="bg-nav" x-data="{showMenu : false}">
+        <button @click.prevent="showMenu = !showMenu " class="px-2 py-4 flex justify-between text-white">
+            <img src="menu.svg" width="22" height="22" class="menu">
+        </button>
+        <div x-show="showMenu">
+            <button @click.prevent="showMenu = !showMenu " class="px-2 py-4 font-bold flex justify-between text-blue-900 w-full border-b border-blue-900 bg-white">
+                Menu
+                <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <nav class="flex flex-col">
+                <a href="#" class="px-2 py-4 text-blue-600 bg-white flex justify-between w-full border-b border-blue-900 hover:text-blue-100 hover:bg-blue-600">
+                    Home
+                    <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 5l7 7-7 7"></path></svg>    
+                </a>
+                <a href="#" class="px-2 py-4 text-blue-600 bg-white flex justify-between w-full border-b border-blue-900 hover:text-blue-100 hover:bg-blue-600">
+                    About
+                    <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 5l7 7-7 7"></path></svg>    
+                </a>
+                <a href="#" class="px-2 py-4 text-blue-600 bg-white flex justify-between w-full border-b border-blue-900 hover:text-blue-100 hover:bg-blue-600">
+                    Services
+                    <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 5l7 7-7 7"></path></svg>    
+                </a>
+                
+                <a href="#" class="px-2 py-4 text-blue-600 bg-white flex justify-between w-full border-b border-blue-900 hover:text-blue-100 hover:bg-blue-600">
+                    Contact us
+                    <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 5l7 7-7 7"></path></svg>    
+                </a>
+            </nav>
+        </div>
+    </div><!-- .bg-blue-500 -->
+
+<!-- partial:index.partial.html -->
+<section class="cd-hero">
+        <ul class="cd-hero-slider">
+            <li class="selected">
+                <div class="cd-full-width">
+                    <h2>Welcome</h2>
+                    <p>Podcast and Evergreen music</p>
+                    
+                </div> <!-- .cd-full-width -->
+            </li>
+
+            <li>
+                <div class="cd-half-width">
+                    <h2>Slide title here</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
+                    <a href="#0" class="cd-btn">Start</a>
+                    <a href="#0" class="cd-btn secondary">Learn More</a>
+                </div> <!-- .cd-half-width -->
+
+                <div class="cd-half-width cd-img-container">
+                    <img src="https://codyhouse.co/demo/hero-slider/assets/tech-1.jpg" alt="tech 1">
+                </div> <!-- .cd-half-width.cd-img-container -->
+            </li>
+
+            <li>
+                <div class="cd-half-width cd-img-container">
+                    <img src="https://codyhouse.co/demo/hero-slider/assets/tech-2.jpg" alt="tech 2">
+                </div> <!-- .cd-half-width.cd-img-container -->
+
+                <div class="cd-half-width">
+                    <h2>Slide title here</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
+                    <a href="#0" class="cd-btn">Start</a>
+                    <a href="#0" class="cd-btn secondary">Learn More</a>
+                </div> <!-- .cd-half-width -->
+                
+            </li>
+
+            <li class="cd-bg-video">
+                <div class="cd-full-width">
+                    <h2>Slide title here</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
+                    <a href="#0" class="cd-btn">Learn more</a>
+                </div> <!-- .cd-full-width -->
+
+<!--<div class="cd-bg-video-wrapper" data-video="https://codyhouse.co/demo/hero-slider/assets/video/video">-->
+                        <div class="cd-bg-video-wrapper" data-video="https://avvimeo-a.akamaihd.net/09682/750/74745479">
+                    <!-- video element will be loaded using jQuery -->
+                </div> <!-- .cd-bg-video-wrapper -->
+            </li>
+
+            <li>
+                <div class="cd-full-width" style="background:url(https://i.vimeocdn.com/video/222142554.webp?mw=1280&mh=720) no-repeat 50% 50%;background-size:cover">
+                    <!--<h2>PROFESSIONal</h2>-->
+                    <p class="professional">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
+                    <a href="#0" class="cd-btn">Start</a>
+                    <a href="#0" class="cd-btn secondary">Learn More</a>
+                </div> <!-- .cd-full-width -->
+            </li>
+      
+            <li>
+                <div class="cd-full-width">
+
+<!-- .begin 3D STUFF HERE -->
+  
+<div class="cd-background-wrapper">
+  <figure class="cd-floating-background is-absolute">
+    <img src="https://i.vimeocdn.com/video/476215411.webp?mw=1280&mh=720" alt="image-1">
+</figure>  
+</div>    
+                    
+<!-- .end 3D STUFF HERE -->
+                </div> <!-- .cd-full-width -->
+            </li>
+        </ul> <!-- .cd-hero-slider -->
+
+        <div class="cd-slider-nav">
+            <nav>
+                <span class="cd-marker item-1"></span>
+                
+                <ul>
+                    <li class="selected"><a href="#0">Intro</a></li>
+                    <li><a href="#0">Tech 1</a></li>
+                    <li><a href="#0">Tech 2</a></li>
+                    <li><a href="#0">Video</a></li>
+<li><a href="#0">Image</a></li>
+                    <li><a href="#0">Image 2</a></li>
+                </ul>
+            </nav> 
+        </div> <!-- .cd-slider-nav -->
+    </section> <!-- .cd-hero -->
+<!-- partial -->
+ 
+ <div class="container" style="margin-bottom: 20px; background: #1f1f1f;">
+
+    <div class="row" style="background-color: #272727; display: flex; ">
+        <div class="col-xs-4">
+            <div class="i-card">
+                <div class="i-card-img">
+                    <img src="https://img.wynk.in/unsafe/180x180/filters:no_upscale():format(webp)/http://s3-ap-south-1.amazonaws.com/wynk-music-cms/music/Wind-Down-Classics-300x300.png"" class="bolly"> 
+                </div>
+                <div class="i-card-name"><a href="Bollywood.html">Clasic hits </a></div>
+            </div>
+        </div>
+
+         <div class="col-xs-4">
+            <div class="i-card">
+                <div class="i-card-img">
+                    <img src="https://img.wynk.in/unsafe/150x150/filters:no_upscale():format(webp)/https://s3-ap-south-1.amazonaws.com/wynk-music-cms/srch_ingrooves/music/srch_ingrooves_192641541803_USA2P2029094.jpg" class="bolly"> 
+                </div>
+                <div class="i-card-name">
+                    Audio Books
+                </div>
+            </div>
+        </div>
+
+         <div class="col-xs-4">
+            <div class="i-card">
+                <div class="i-card-img">
+                    <img src="https://img.wynk.in/unsafe/180x180/filters:no_upscale():format(webp)/https://s3-ap-south-1.amazonaws.com/wynk-music-cms/music/90s-Wala-Pyar--300x300-hindi.png" class="bolly"> 
+                </div>
+                <div class="i-card-name">90's hits</div>
+            </div>
+        </div>
+        
+</div>
+
+
+    <div class="row" style="background-color: #272727; display: flex;margin-top: 12px;">
+        <div class="col-xs-4">
+            <div class="i-card">
+                <div class="i-card-img">
+                    <img src="https://img.wynk.in/unsafe/150x150/filters:no_upscale():format(webp)/https://s3-ap-south-1.amazonaws.com/wynk-music-cms/srch_believe/music/3616407856347/1596804938/srch_believe_A10320WT035320208T.jpg" class="bolly"> 
+                </div>
+                <div class="i-card-name">Podcast</div>
+            </div>
+        </div>
+
+         <div class="col-xs-4">
+            <div class="i-card">
+                <div class="i-card-img">
+                    <img src="https://img.wynk.in/unsafe/180x180/filters:no_upscale():format(webp)/https://s3-ap-south-1.amazonaws.com/wynk-music-cms/srch_believe/music/srch_believe_A10320WT031159439W.jpg" class="bolly"> 
+                </div>
+                <div class="i-card-name">Speech</div>
+            </div>
+        </div>
+
+        <div class="col-xs-4">
+            <div class="i-card">
+                <div class="i-card-img">
+                    <img src="https://img.wynk.in/unsafe/180x180/filters:no_upscale():format(webp)/https://s3-ap-south-1.amazonaws.com/wynk-music-cms/music/Most-Searched-300x300a.png" class="bolly"> 
+                </div>
+                <div class="i-card-name">English hits</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="background-color: #272727; display: flex;margin-top: 12px;">
+        <div class="col-xs-4">
+            <div class="i-card">
+                <div class="i-card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRCrXu65GvFM3Zg1OmMpGDUdisuFIh4D3UdCw&usqp=CAU" class="bolly"> 
+                </div>
+                <div class="i-card-name">Instrumental</div>
+            </div>
+        </div>
+
+         <div class="col-xs-4">
+            <div class="i-card">
+                <div class="i-card-img">
+                    <img src="https://starsunfolded.com/wp-content/uploads/2018/01/Osho-Poona2-1-compressed-2.jpg" class="bolly"> 
+                </div>
+                <div class="i-card-name">Osho</div>
+            </div>
+        </div>
+
+        <div class="col-xs-4">
+            <div class="i-card">
+                <div class="i-card-img">
+                    <img src="https://img.wynk.in/unsafe/180x180/filters:no_upscale():format(webp)/https://s3-ap-south-1.amazonaws.com/wynk-music-cms/music/1597331457/srch_abcdigital_UKJ8H2035044.jpg" class="bolly"> 
+                </div>
+                <div class="i-card-name">Punjabi</div>
+            </div>
+        </div>
+    </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script><script  src="./script.js"></script>
+
+  <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js'></script>
+  <script src='dist/script.js'></script>
+</body>
+</html>
